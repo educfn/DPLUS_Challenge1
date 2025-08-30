@@ -2,11 +2,11 @@
 A programming challenge provided to evaluation.
 
 1. - [ ] Utilizar MVVM (Model View ViewModel) como principal padrão para implementação;
-2. - [ ] A classe cliente deverá possuir:
-a. - [ ] Name
-b. - [ ] Lastname
-c. - [ ] Age
-d. - [ ] Address
+2. - [x] A classe cliente deverá possuir:
+a. Name
+b. Lastname
+c. Age
+d. Address
 3. - [ ] A tela inicial deverá conter uma lista de clientes e permitir as operações de Inclusão,
 Exclusão e Alteração dos clientes:
 a. - [ ] As telas referentes a estas ações devem abrir em uma nova janela e fechar ao
