@@ -14,7 +14,7 @@ cancelar a operação, ou salvar a inclusão/alteração.
 b. - [ ] Para exclusão, pode ser utilizado uma mensagem de confirmação, do próprio
 .NET Maui, ou criar a sua própria, utilizando uma nova janela.
 4. - [ ] Utilizar injeção de dependência;
-5. - [ ] Publicar em um repositório público no Github.com;
+5. - [x] Publicar em um repositório público no Github.com;
 
 Opcionais:
 1. - [ ] Persistir os dados da forma que preferir, permitindo que, ao executar novamente o
@@ -26,5 +26,5 @@ letra;
 abrirem ao centro da tela;
 
 Instruções de entrega
-- [ ] Deve ser enviado para um repositório público em até 72 horas após o recebimento da prova;
+- [x] Deve ser enviado para um repositório público em até 72 horas após o recebimento da prova;
 - [ ] Colocar no README do repositório um print da aplicação funcional.
