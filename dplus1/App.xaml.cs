@@ -1,4 +1,6 @@
-﻿namespace dplus1;
+﻿using dplus1.Views;
+
+namespace dplus1;
 
 public partial class App : Application
 {
@@ -9,6 +11,6 @@ public partial class App : Application
 
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
-		return new Window(new AppShell());
+		return new Window(new NavigationPage(new ClientsListView()));
 	}
 }
