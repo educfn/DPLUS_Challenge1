@@ -25,3 +25,6 @@ letra;
 4. Abrir a janela principal maximizada e as janelas referentes as operações de cadastro,
 abrirem ao centro da tela;
 
+Instruções de entrega
+Deve ser enviado para um repositório público em até 72 horas após o recebimento da prova;
+Colocar no README do repositório um print da aplicação funcional.
