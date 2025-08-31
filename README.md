@@ -1,7 +1,7 @@
 # DPLUS_Challenge1
 A programming challenge provided to evaluation.
 
-1. - [ ] Utilizar MVVM (Model View ViewModel) como principal padrão para implementação;
+1. - [x] Utilizar MVVM (Model View ViewModel) como principal padrão para implementação;
 2. - [x] A classe cliente deverá possuir: Name, Lastname, Age e Address.
 3. - [ ] A tela inicial deverá conter uma lista de clientes e permitir as operações de Inclusão,
 Exclusão e Alteração dos clientes:
@@ -9,7 +9,7 @@ Exclusão e Alteração dos clientes:
 cancelar a operação, ou salvar a inclusão/alteração.
       - [ ] Para exclusão, pode ser utilizado uma mensagem de confirmação, do próprio
 .NET Maui, ou criar a sua própria, utilizando uma nova janela.
-4. - [ ] Utilizar injeção de dependência;
+4. - [x] Utilizar injeção de dependência;
 5. - [x] Publicar em um repositório público no Github.com;
 
 Opcionais:
