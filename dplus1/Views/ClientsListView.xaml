@@ -1,19 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="dplus1.Views.ClientsListView"
-             xmlns:viewModels="clr-namespace:dplus1.ViewModels"
-             x:DataType="viewModels:ClientsListViewModel">
+<ContentPage
+	x:Class="dplus1.Views.ClientsListView"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:model="clr-namespace:dplus1.Model"
+	xmlns:viewModels="clr-namespace:dplus1.ViewModels"
+	x:DataType="viewModels:ClientsListViewModel">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
-            <Button
-                x:Name="BtnNavigateToClient"
-                Text="Navigate to Client View"
-                Command="{Binding CommandNavigateToClientView}"
-                HorizontalOptions="Fill" />
-        </VerticalStackLayout>
-    </ScrollView>
+	<ScrollView>
+		<StackLayout>
+			<Border
+				BackgroundColor="Gray"
+				HeightRequest="500"
+				StrokeThickness="2">
+				<Border.StrokeShape>
+					<RoundRectangle CornerRadius="20" />
+				</Border.StrokeShape>
+				<CollectionView
+					Margin="10"
+					BackgroundColor="LightSalmon"
+					ItemsSource="{Binding AllClients}">
+					<CollectionView.ItemsLayout>
+						<LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
+					</CollectionView.ItemsLayout>
+					<CollectionView.ItemTemplate>
+						<DataTemplate x:DataType="model:Client">
+							<HorizontalStackLayout>
+								<Label
+									Margin="10,10"
+									FontAttributes="Bold"
+									FontSize="22">
+									<Label.FormattedText>
+										<FormattedString>
+											<Span
+												FontAttributes="Bold"
+												Text="Client - "
+												TextColor="Black" />
+											<Span
+												FontAttributes="Bold"
+												Text="{Binding Name, FallbackValue=Name}"
+												TextColor="Gray" />
+											<Span FontAttributes="Bold" Text=" " />
+											<Span
+												FontAttributes="Bold"
+												Text="{Binding Lastname, FallbackValue=LastName}"
+												TextColor="DarkGoldenrod" />
+											<Span
+												FontAttributes="Bold"
+												Text=" - Age: "
+												TextColor="Black" />
+											<Span
+												FontAttributes="Bold"
+												Text="{Binding Age, FallbackValue=Age}"
+												TextColor="DarkCyan" />
+											<Span
+												FontAttributes="Bold"
+												Text=" - Address: "
+												TextColor="Black" />
+											<Span
+												FontAttributes="Bold"
+												Text="{Binding Address, FallbackValue=Address}"
+												TextColor="DarkBlue" />
+										</FormattedString>
+									</Label.FormattedText>
+								</Label>
+							</HorizontalStackLayout>
+						</DataTemplate>
+					</CollectionView.ItemTemplate>
+				</CollectionView>
+			</Border>
+			<HorizontalStackLayout
+				Padding="30"
+				HorizontalOptions="Center"
+				Spacing="25">
+				<Button FontAttributes="Bold" Text="Add" />
+				<Button
+					Command="{Binding CommandNavigateToClientView}"
+					FontAttributes="Bold"
+					Text="Modify" />
+				<Button FontAttributes="Bold" Text="Delete" />
+			</HorizontalStackLayout>
+		</StackLayout>
+	</ScrollView>
 </ContentPage>
