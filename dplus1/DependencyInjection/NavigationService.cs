@@ -11,7 +11,7 @@ public class NavigationService : INavigationService
     }
 
     private INavigation Navigation
-        => Application.Current?.MainPage?.Navigation
+        => Application.Current?.Windows[0]?.Page?.Navigation
             ?? throw new InvalidOperationException("Navigation not available");
 
     public Task PushAsync<TPage>() where TPage : Page

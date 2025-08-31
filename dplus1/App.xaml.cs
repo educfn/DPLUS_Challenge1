@@ -11,6 +11,15 @@ public partial class App : Application
 
 	protected override Window CreateWindow(IActivationState? activationState)
 	{
-		return new Window(new NavigationPage(new ClientsListView()));
+		var mainPage = activationState?.Context.Services.GetService<ClientsListView>();
+		if (mainPage == null)
+			throw new InvalidOperationException("ClientsListView is not registered in the DI container.");
+
+		var window = new Window
+		{
+			Page = new NavigationPage(mainPage)
+		};
+
+		return window;
 	}
 }

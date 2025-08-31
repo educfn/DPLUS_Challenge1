@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using dplus1.DependencyInjection;
+using dplus1.ViewModels;
+using dplus1.Views;
+using Microsoft.Extensions.Logging;
 
 namespace dplus1;
 
@@ -18,6 +21,13 @@ public static class MauiProgram
 #if DEBUG
 		builder.Logging.AddDebug();
 #endif
+		builder.Services.AddSingleton<INavigationService, NavigationService>();
+
+		builder.Services.AddTransient<ClientView>();
+		builder.Services.AddTransient<ClientViewModel>();
+
+		builder.Services.AddTransient<ClientsListView>();
+		builder.Services.AddSingleton<ClientsListViewModel>();
 
 		return builder.Build();
 	}

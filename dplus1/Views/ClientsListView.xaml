@@ -4,15 +4,11 @@
              x:Class="dplus1.Views.ClientsListView"
              xmlns:viewModels="clr-namespace:dplus1.ViewModels"
              x:DataType="viewModels:ClientsListViewModel">
-    <ContentPage.BindingContext>
-        <viewModels:ClientsListViewModel />
-    </ContentPage.BindingContext>
 
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-
             <Button
                 x:Name="BtnNavigateToClient"
                 Text="Navigate to Client View"

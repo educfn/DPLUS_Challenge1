@@ -1,9 +1,12 @@
-﻿namespace dplus1.Views;
+﻿using dplus1.ViewModels;
+
+namespace dplus1.Views;
 
 public partial class ClientsListView : ContentPage
 {
-	public ClientsListView()
+	public ClientsListView(ClientsListViewModel vm)
 	{
 		InitializeComponent();
+		BindingContext = vm;
 	}
 }
