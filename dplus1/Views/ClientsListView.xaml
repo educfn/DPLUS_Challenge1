@@ -7,6 +7,64 @@
 	xmlns:viewModels="clr-namespace:dplus1.ViewModels"
 	x:DataType="viewModels:ClientsListViewModel">
 
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<x:Array x:Key="FakeClients" Type="{x:Type model:Client}">
+				<model:Client
+					Name="João"
+					Address="Rua das Flores, 123 - São Paulo/SP"
+					Age="22"
+					Lastname="Silva" />
+				<model:Client
+					Name="Maria"
+					Address="Avenida Brasil, 456 - Rio de Janeiro/RJ"
+					Age="35"
+					Lastname="Oliveira" />
+				<model:Client
+					Name="Carlos"
+					Address="Rua das Palmeiras, 789 - Belo Horizonte/MG"
+					Age="41"
+					Lastname="Santos" />
+				<model:Client
+					Name="Ana"
+					Address="Travessa do Comércio, 55 - Salvador/BA"
+					Age="28"
+					Lastname="Souza" />
+				<model:Client
+					Name="Paulo"
+					Address="Praça Sete de Setembro, 12 - Curitiba/PR"
+					Age="19"
+					Lastname="Lima" />
+				<model:Client
+					Name="Fernanda"
+					Address="Rua XV de Novembro, 230 - Porto Alegre/RS"
+					Age="47"
+					Lastname="Pereira" />
+				<model:Client
+					Name="Rafael"
+					Address="Avenida Beira-Mar, 88 - Fortaleza/CE"
+					Age="33"
+					Lastname="Costa" />
+				<model:Client
+					Name="Camila"
+					Address="Rua do Sol, 14 - Recife/PE"
+					Age="26"
+					Lastname="Martins" />
+				<model:Client
+					Name="Bruno"
+					Address="Avenida Goiás, 310 - Goiânia/GO"
+					Age="52"
+					Lastname="Almeida" />
+				<model:Client
+					Name="Juliana"
+					Address="Rua Dom Pedro II, 77 - Manaus/AM"
+					Age="38"
+					Lastname="Ferreira" />
+
+			</x:Array>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+
 	<ScrollView>
 		<StackLayout>
 			<Border
