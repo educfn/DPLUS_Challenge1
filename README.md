@@ -18,7 +18,8 @@ aplicativo, os dados sejam carregados e possam ser manipulados;
 2. - [ ] Testes unitários;
 3. - [ ] Verificação do tipo de dado digitado em cada campo, ex: Age não pode receber uma
 letra;
-4. - [ ] Abrir a janela principal maximizada e as janelas referentes as operações de cadastro,
+4. - [x] Abrir a janela principal maximizada
+   - [ ] e as janelas referentes as operações de cadastro,
 abrirem ao centro da tela;
 
 Instruções de entrega
