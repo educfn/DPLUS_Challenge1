@@ -24,7 +24,7 @@ public static class MauiProgram
 		builder.Services.AddSingleton<INavigationService, NavigationService>();
 
 		builder.Services.AddTransient<ClientView>();
-		builder.Services.AddTransient<ClientViewModel>();
+		builder.Services.AddSingleton<ClientViewModel>();
 
 		builder.Services.AddTransient<ClientsListView>();
 		builder.Services.AddSingleton<ClientsListViewModel>();

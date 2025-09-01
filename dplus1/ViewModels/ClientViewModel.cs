@@ -1,23 +1,40 @@
 ﻿using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
 using dplus1.DependencyInjection;
+using dplus1.Model;
 
 namespace dplus1.ViewModels;
 
 public class ClientViewModel
 {
     private readonly INavigationService navigationService;
+    private ClientsListViewModel clientList;
 
-    public ClientViewModel(INavigationService navigationService)
+    public ClientViewModel(
+        INavigationService navigationService,
+        ClientsListViewModel clientList)
     {
         this.navigationService = navigationService;
-        CommandNavigateBack = new AsyncRelayCommand(NavigateBack,AsyncRelayCommandOptions.None);
+        this.clientList = clientList;
+        CommandSave = new AsyncRelayCommand(Save,AsyncRelayCommandOptions.None);
+        CommandCancel = new AsyncRelayCommand(Cancel,AsyncRelayCommandOptions.None);
     }
 
-    public ICommand CommandNavigateBack { get; }
+    public Client Client{ get; set;} = new Client();
 
-    public async Task NavigateBack()
+    public ICommand CommandSave { get; }
+    public ICommand CommandCancel { get; }
+
+    public async Task Save()
     {
+        clientList.AllClients.Add(Client);
+        this.Client = new();
+        await navigationService.PopAsync();
+    }
+
+    public async Task Cancel()
+    {
+        this.Client = new();
         await navigationService.PopAsync();
     }
 }

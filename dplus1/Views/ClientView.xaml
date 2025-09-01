@@ -1,14 +1,109 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:viewModels="clr-namespace:dplus1.ViewModels"
-             x:Class="dplus1.Views.ClientView"
-             Title="ClientView"
-             x:DataType="viewModels:ClientViewModel">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+<ContentPage
+	x:Class="dplus1.Views.ClientView"
+	xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:viewModels="clr-namespace:dplus1.ViewModels"
+	x:DataType="viewModels:ClientViewModel"
+	BackgroundColor="Black">
+
+	<Grid RowDefinitions="75*,25*">
+		<VerticalStackLayout Grid.Row="0">
+			<Label
+				Margin="0,0,0,20"
+				FontAttributes="Bold"
+				FontSize="32"
+				HorizontalOptions="Center"
+				Text="Client Register"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Label
+				FontAttributes="Bold"
+				FontSize="16"
+				HorizontalOptions="Center"
+				Text="Client Name"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Entry
+				Margin="20,0,20,40"
+				BackgroundColor="LightGray"
+				FontAttributes="Bold"
+				HorizontalTextAlignment="Center"
+				Placeholder="Name"
+				Text="{Binding Client.Name}"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Label
+				FontAttributes="Bold"
+				FontSize="16"
+				HorizontalOptions="Center"
+				Text="Client LastName"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Entry
+				Margin="20,0,20,40"
+				BackgroundColor="LightGray"
+				FontAttributes="Bold"
+				HorizontalTextAlignment="Center"
+				Placeholder="LastName"
+				Text="{Binding Client.Lastname}"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Label
+				FontAttributes="Bold"
+				FontSize="16"
+				HorizontalOptions="Center"
+				Text="Client Age"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Entry
+				Margin="20,0,20,40"
+				BackgroundColor="LightGray"
+				FontAttributes="Bold"
+				HorizontalTextAlignment="Center"
+				Keyboard="Numeric"
+				Placeholder="Enter a number"
+				Text="{Binding Client.Age}"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Label
+				FontAttributes="Bold"
+				FontSize="16"
+				HorizontalOptions="Center"
+				Text="Client Address"
+				TextColor="White"
+				VerticalOptions="Center" />
+			<Entry
+				Margin="20,0,20,40"
+				BackgroundColor="LightGray"
+				FontAttributes="Bold"
+				HorizontalTextAlignment="Center"
+				Placeholder="Address"
+				Text="{Binding Client.Address}"
+				TextColor="White"
+				VerticalOptions="Center" />
+		</VerticalStackLayout>
+
+		<Grid
+			Grid.Row="1"
+			ColumnDefinitions="10*,35*,10*,35*,10*"
+			RowDefinitions="90*, 10*">
+			<Button
+				Grid.Row="0"
+				Grid.Column="1"
+				Command="{Binding CommandSave}"
+				FontAttributes="Bold"
+				FontFamily="Roboto"
+				FontSize="30"
+				Text="Save" />
+			<Button
+				Grid.Row="0"
+				Grid.Column="3"
+				Command="{Binding CommandCancel}"
+				FontAttributes="Bold"
+				FontFamily="Roboto"
+				FontSize="30"
+				Text="Cancel" />
+		</Grid>
+	</Grid>
 </ContentPage>
