@@ -139,6 +139,7 @@
 				<Button
 					Command="{Binding CommandAddClient}"
 					FontAttributes="Bold"
+					Released="Button_Released"
 					Text="Add" />
 			</HorizontalStackLayout>
 		</StackLayout>
