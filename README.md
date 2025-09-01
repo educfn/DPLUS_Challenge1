@@ -16,7 +16,7 @@ Opcionais:
 1. - [ ] Persistir os dados da forma que preferir, permitindo que, ao executar novamente o
 aplicativo, os dados sejam carregados e possam ser manipulados;
 2. - [ ] Testes unitários;
-3. - [ ] Verificação do tipo de dado digitado em cada campo, ex: Age não pode receber uma
+3. - [x] Verificação do tipo de dado digitado em cada campo, ex: Age não pode receber uma
 letra;
 4. - [x] Abrir a janela principal maximizada
    - [ ] e as janelas referentes as operações de cadastro,
