@@ -16,25 +16,39 @@ public class ClientViewModel
     {
         this.navigationService = navigationService;
         this.clientList = clientList;
+        clientList.ClientViewModel = this;
         CommandSave = new AsyncRelayCommand(Save,AsyncRelayCommandOptions.None);
         CommandCancel = new AsyncRelayCommand(Cancel,AsyncRelayCommandOptions.None);
     }
 
-    public Client Client{ get; set;} = new Client();
+    public Client Client { get; set;} = new Client();
+    public Client UnmodifiedClient { get; set;} = new Client();
 
     public ICommand CommandSave { get; }
     public ICommand CommandCancel { get; }
 
     public async Task Save()
     {
+        var newClient = new Client();
+
+        if (Client.Equals(newClient) || Client.Equals(UnmodifiedClient)) return;
+
+        if (!UnmodifiedClient.Equals(newClient))
+        {
+            clientList.AllClients.Remove(UnmodifiedClient);
+        }
+
         clientList.AllClients.Add(Client);
+
         this.Client = new();
+        this.UnmodifiedClient = new();
         await navigationService.PopAsync();
     }
 
     public async Task Cancel()
     {
         this.Client = new();
+        this.UnmodifiedClient = new();
         await navigationService.PopAsync();
     }
 }
