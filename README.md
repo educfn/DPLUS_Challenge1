@@ -13,7 +13,7 @@ cancelar a operação, ou salvar a inclusão/alteração.
 5. - [x] Publicar em um repositório público no Github.com;
 
 Opcionais:
-1. - [ ] Persistir os dados da forma que preferir, permitindo que, ao executar novamente o
+1. - [x] Persistir os dados da forma que preferir, permitindo que, ao executar novamente o
 aplicativo, os dados sejam carregados e possam ser manipulados;
 2. - [ ] Testes unitários;
 3. - [x] Verificação do tipo de dado digitado em cada campo, ex: Age não pode receber uma
