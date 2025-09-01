@@ -77,7 +77,10 @@
 				<CollectionView
 					Margin="10"
 					BackgroundColor="LightSalmon"
-					ItemsSource="{Binding AllClients}">
+					ItemsSource="{Binding AllClients}"
+					SelectionChangedCommand="{Binding CommandModifyClient}"
+					SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}"
+					SelectionMode="Single">
 					<CollectionView.ItemsLayout>
 						<LinearItemsLayout ItemSpacing="10" Orientation="Vertical" />
 					</CollectionView.ItemsLayout>
@@ -131,11 +134,10 @@
 				Padding="30"
 				HorizontalOptions="Center"
 				Spacing="25">
-				<Button FontAttributes="Bold" Text="Add" />
 				<Button
-					Command="{Binding CommandNavigateToClientView}"
+					Command="{Binding CommandAddClient}"
 					FontAttributes="Bold"
-					Text="Modify" />
+					Text="Add" />
 				<Button FontAttributes="Bold" Text="Delete" />
 			</HorizontalStackLayout>
 		</StackLayout>

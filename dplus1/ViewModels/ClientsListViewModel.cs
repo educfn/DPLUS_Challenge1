@@ -16,13 +16,20 @@ public class ClientsListViewModel
         this.navigationService = navigationService;
         AllClients = new ObservableCollection<Client>();
 
-        CommandNavigateToClientView = new AsyncRelayCommand(NavigateToClient, AsyncRelayCommandOptions.None);
+        CommandAddClient = new AsyncRelayCommand(AddClient, AsyncRelayCommandOptions.None);
+        CommandModifyClient = new AsyncRelayCommand(ModifyClient, AsyncRelayCommandOptions.None);
     }
 
-    public ICommand CommandNavigateToClientView { get; }
+    public ICommand CommandAddClient { get; }
+    public ICommand CommandModifyClient { get; }
     public ObservableCollection<Client> AllClients { get; }
 
-    private async Task NavigateToClient()
+    private async Task AddClient()
+    {
+        await this.navigationService.PushAsync<ClientView>();
+    }
+
+    private async Task ModifyClient()
     {
         await this.navigationService.PushAsync<ClientView>();
     }
