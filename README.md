@@ -5,7 +5,7 @@ A programming challenge provided to evaluation.
 2. - [x] A classe cliente deverá possuir: Name, Lastname, Age e Address.
 3. - [ ] A tela inicial deverá conter uma lista de clientes e permitir as operações de Inclusão,
 Exclusão e Alteração dos clientes:
-      - [ ] As telas referentes a estas ações devem abrir em uma nova janela e fechar ao
+      - [x] As telas referentes a estas ações devem abrir em uma nova janela e fechar ao
 cancelar a operação, ou salvar a inclusão/alteração.
       - [ ] Para exclusão, pode ser utilizado uma mensagem de confirmação, do próprio
 .NET Maui, ou criar a sua própria, utilizando uma nova janela.
