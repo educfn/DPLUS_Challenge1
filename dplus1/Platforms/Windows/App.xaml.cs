@@ -33,7 +33,10 @@ public partial class App : MauiWinUIApplication
         var windowId = Win32Interop.GetWindowIdFromWindow(hwnd);
         var appWindow = AppWindow.GetFromWindowId(windowId);
 
-		appWindow.SetPresenter(AppWindowPresenterKind.FullScreen);
+		if (appWindow.Presenter is OverlappedPresenter presenter)
+        {
+            presenter.Maximize();
+        }
     }
 }
 
