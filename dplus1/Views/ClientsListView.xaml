@@ -140,7 +140,6 @@
 					Command="{Binding CommandAddClient}"
 					FontAttributes="Bold"
 					Text="Add" />
-				<Button FontAttributes="Bold" Text="Delete" />
 			</HorizontalStackLayout>
 		</StackLayout>
 	</ScrollView>
