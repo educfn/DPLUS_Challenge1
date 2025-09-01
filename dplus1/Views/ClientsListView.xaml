@@ -5,7 +5,8 @@
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 	xmlns:model="clr-namespace:dplus1.Model"
 	xmlns:viewModels="clr-namespace:dplus1.ViewModels"
-	x:DataType="viewModels:ClientsListViewModel">
+	x:DataType="viewModels:ClientsListViewModel"
+	NavigatedTo="ContentPage_NavigatedTo">
 
 	<ContentPage.Resources>
 		<ResourceDictionary>
@@ -75,10 +76,11 @@
 					<RoundRectangle CornerRadius="20" />
 				</Border.StrokeShape>
 				<CollectionView
+					x:Name="clientsCollection"
 					Margin="10"
 					BackgroundColor="LightSalmon"
 					ItemsSource="{Binding AllClients}"
-					SelectionChangedCommand="{Binding CommandModifyClient}"
+					SelectionChangedCommand="{Binding CommandSelectedClient}"
 					SelectionChangedCommandParameter="{Binding Source={RelativeSource Self}, Path=SelectedItem}"
 					SelectionMode="Single">
 					<CollectionView.ItemsLayout>

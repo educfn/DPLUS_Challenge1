@@ -9,4 +9,9 @@ public partial class ClientsListView : ContentPage
 		InitializeComponent();
 		BindingContext = vm;
 	}
+
+	private void ContentPage_NavigatedTo(object sender, NavigatedToEventArgs e)
+    {
+        clientsCollection.SelectedItem = null;
+    }
 }
