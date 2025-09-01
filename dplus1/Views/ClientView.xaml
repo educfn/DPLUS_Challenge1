@@ -107,7 +107,7 @@
 			<Button
 				Grid.Row="0"
 				Grid.Column="5"
-				Command="{Binding CommandRemove}"
+				Clicked="RemoveClientButtonClicked"
 				FontAttributes="Bold"
 				FontFamily="Roboto"
 				FontSize="30"
