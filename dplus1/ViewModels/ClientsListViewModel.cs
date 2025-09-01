@@ -34,7 +34,7 @@ public class ClientsListViewModel
     {
         if (client == null) return;
 
-        ClientViewModel.Client = client;
+        ClientViewModel.Client = client.ToClone();
         ClientViewModel.UnmodifiedClient = client.ToClone();
         await this.navigationService.PushAsync<ClientView>();
     }
